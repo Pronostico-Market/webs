@@ -2073,10 +2073,10 @@
         creator_name: form.creator_name.value,
         niche: form.niche.value,
         followers: form.followers.value,
-        platform1: form.platform1.value,
+        platform1: form.platform1 ? form.platform1.value : "",
         handle1: form.handle1.value,
         platform2: form.platform2.value,
-        handle2: form.handle2.value,
+        handle2: form.handle2 ? form.handle2.value : "",
         about: form.about.value
       };
       try {
