@@ -1212,5 +1212,37 @@ document.querySelectorAll('.lang-select').forEach(sel=>{
 })();
 
 </script>
+
+<script>
+(function() {
+  // Get current lang from URL path
+  var path = window.location.pathname;
+  var lang = 'es';
+  if (path.indexOf('/en/') === 0 || path === '/en') lang = 'en';
+  else if (path.indexOf('/pt/') === 0 || path === '/pt') lang = 'pt';
+
+  // Rewrite cross-landing links to preserve language
+  document.querySelectorAll('a[href="/creators"], a[href="/partners"], a[href="/"]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href === '/creators') a.setAttribute('href', '/' + lang + '/creators');
+    else if (href === '/partners') a.setAttribute('href', '/' + lang + '/partners');
+  });
+
+  // Fix lang-select redirect to preserve current landing
+  var selects = document.querySelectorAll('.lang-select');
+  selects.forEach(function(sel) {
+    sel.addEventListener('change', function() {
+      var newLang = this.value;
+      // Extract current landing (creators/partners or none)
+      var match = path.match(/\/(es|en|pt)\/([\w-]+)/);
+      if (match) {
+        window.location.href = '/' + newLang + '/' + match[2] + '/';
+      } else {
+        window.location.href = '/' + newLang + '/';
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>
