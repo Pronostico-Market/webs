@@ -2624,6 +2624,28 @@
 
   </script>
   
-</body>
+<script>
+    (function () {
+      var path = window.location.pathname;
+      var lang = "es";
+      var base = "/";
+      var langMatch = path.match(/^\/([\w-]+)\/([\w-]+)/);
+      if (langMatch) {
+        base = "/" + langMatch[1] + "/";
+        lang = langMatch[2];
+      } else {
+        var rootMatch = path.match(/^\/([\w-]+)\//);
+        if (rootMatch) { base = "/" + rootMatch[1] + "/"; }
+      }
+      document.querySelectorAll('a[href="/creators"], a[href="/partners"]').forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (href === '/creators') a.setAttribute('href', base + lang + '/creators/');
+        else if (href === '/partners') a.setAttribute('href', base + lang + '/partners/');
+      });
+      document.querySelectorAll('a[href="/"]').forEach(function (a) {
+        a.setAttribute('href', base + lang + '/');
+      });
+    })();
+  </script>\n</body>
 
 </html>
