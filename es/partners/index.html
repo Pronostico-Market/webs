@@ -2274,41 +2274,26 @@
     })();
 
   </script>
-  <script>
+  
+<script>
     (function () {
       var path = window.location.pathname;
       var lang = "es";
       var base = "/";
-      var langMatch = path.match(/^\/([\w-]+)\/([\w-]+)/);
+      var langMatch = path.match(/^\/(es|en|pt)\/?/);
       if (langMatch) {
-        base = "/" + langMatch[1] + "/";
-        lang = langMatch[2];
-      } else {
-        var rootMatch = path.match(/^\/([\w-]+)\//);
-        if (rootMatch) { base = "/" + rootMatch[1] + "/"; }
+        lang = langMatch[1];
+        base = "/" + lang + "/";
       }
       document.querySelectorAll('a[href="/creators"], a[href="/partners"]').forEach(function (a) {
         var href = a.getAttribute('href');
-        if (href === '/creators') a.setAttribute('href', base + lang + '/creators/');
-        else if (href === '/partners') a.setAttribute('href', base + lang + '/partners/');
+        if (href === '/creators') a.setAttribute('href', base + 'creators/');
+        else if (href === '/partners') a.setAttribute('href', base + 'partners/');
       });
       document.querySelectorAll('a[href="/"]').forEach(function (a) {
-        a.setAttribute('href', base + lang + '/');
-      });
-      var selects = document.querySelectorAll('.lang-select');
-      selects.forEach(function (sel) {
-        sel.addEventListener('change', function () {
-          var newLang = this.value;
-          var landingMatch = path.match(/\/(es|en|pt)\/([\w-]+)/);
-          if (landingMatch) {
-            window.location.href = base + newLang + '/' + landingMatch[2] + '/';
-          } else {
-            window.location.href = base + newLang + '/';
-          }
-        });
+        a.setAttribute('href', base);
       });
     })();
-  </script>
-</body>
+  </script>\n</body>
 
 </html>
