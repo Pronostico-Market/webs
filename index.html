@@ -11,9 +11,7 @@
       var dest = '/es/';
       if (lang === 'en') dest = '/en/';
       else if (lang === 'pt') dest = '/pt/';
-      // Toma el path actual (ej: /pronostico-hompage-landing/) y agrega el idioma
-      var base = window.location.href.split('?')[0].replace(/\/?$/, '/');
-      window.location.replace(base + dest);
+      window.location.replace(dest);
     })();
   </script>
 </head>
