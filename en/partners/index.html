@@ -12,7 +12,7 @@
     content="Plug into our prediction markets API. Add markets to your product and earn on-chain fee share automatically. No contract. Just a wallet." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pronostico.market/en/partners" />
-  <!-- Open Graph Images - Multilingual (ES, EN, PT) -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <!-- Default: Spanish -->
   <meta property="og:image" content="https://pronostico-market.github.io/webs/og-images/banner-partners-en.png" />
   <meta property="og:image:width" content="1200" />
@@ -2253,11 +2253,11 @@
     });
     // Lang selector events
     document.querySelectorAll('.lang-select').forEach(sel => {
-      sel.addEventListener('change', e => { 
-          var l = e.target.value;
-          var path = window.location.pathname.replace(/^\/(es|en|pt)\//, '/' + l + '/');
-          window.location.href = path;
-        });
+      sel.addEventListener('change', e => {
+        var l = e.target.value;
+        var path = window.location.pathname.replace(/^\/(es|en|pt)\//, '/' + l + '/');
+        window.location.href = path;
+      });
     });
 
     // Auto-detect language
