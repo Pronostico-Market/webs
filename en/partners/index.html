@@ -2255,7 +2255,8 @@
     document.querySelectorAll('.lang-select').forEach(sel => {
       sel.addEventListener('change', e => { 
           var l = e.target.value;
-          window.location.href = '/' + l + '/';
+          var path = window.location.pathname.replace(/^\/(es|en|pt)\//, '/' + l + '/');
+          window.location.href = path;
         });
     });
 
