@@ -8,9 +8,9 @@
   <script>
     (function () {
       var lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
-      var dest = 'en/';
-      if (lang === 'en') dest = 'en/';
-      else if (lang === 'pt') dest = 'pt/';
+      var dest = '/es/';
+      if (lang === 'en') dest = '/en/';
+      else if (lang === 'pt') dest = '/pt/';
       // Toma el path actual (ej: /pronostico-hompage-landing/) y agrega el idioma
       var base = window.location.href.split('?')[0].replace(/\/?$/, '/');
       window.location.replace(base + dest);
@@ -20,7 +20,7 @@
 
 <body
   style="background:#0A0A0A;color:#fff;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0">
-  <p>Redirecting... <a href="en/" style="color:#EEFF6B">Click here if not redirected</a></p>
+  <p>Redirecting... <a href="/en/" style="color:#EEFF6B">Click here if not redirected</a></p>
 </body>
 
 </html>

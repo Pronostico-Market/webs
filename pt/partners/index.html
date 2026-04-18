@@ -2251,7 +2251,10 @@
     });
     // Lang selector events
     document.querySelectorAll('.lang-select').forEach(sel => {
-      sel.addEventListener('change', e => { var l = e.target.value; var p = window.location.pathname.replace(/\/$/, '').split('/'); if (p.length > 0 && ['es', 'en', 'pt'].includes(p[0])) p[0] = l; else if (p.length > 0) p[0] = l; else p = [l]; window.location.href = '/' + p.join('/') + '/' });
+      sel.addEventListener('change', e => { 
+          var l = e.target.value;
+          window.location.href = '/' + l + '/';
+        });
     });
 
     // Auto-detect language
