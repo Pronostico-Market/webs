@@ -8,9 +8,9 @@
   <script>
     (function () {
       var lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
-      var dest = '/es/';
-      if (lang === 'en') dest = '/en/';
-      else if (lang === 'pt') dest = '/pt/';
+      var dest = 'es/';
+      if (lang === 'en') dest = 'en/';
+      else if (lang === 'pt') dest = 'pt/';
       window.location.replace(dest);
     })();
   </script>
