@@ -1800,13 +1800,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="c-field"><label data-i18n="form_name">Nome *</label><input name="name" required="" type="text"/></div>
 <div class="c-field"><label data-i18n="form_email">Email *</label><input name="email" required="" type="email"/></div>
 </div>
-<div class="c-field"><label data-i18n="form_country">País / região *</label><input name="country" required="" type="text"/></div>
+<div class="c-field"><label data-i18n="form_country">País / região *</label><input name="country_region" required="" type="text"/></div>
 <div class="c-field"><label data-i18n="form_categories">Categoria principal *</label>
-<select name="category" required=""><option data-i18n="form_category_empty" value="">Selecione uma</option><option value="Crypto">Cripto</option><option value="Sports">Esportes</option><option value="Politics">Política</option><option value="Economy">Economia</option><option value="Entertainment">Entretenimento</option><option value="Culture">Cultura</option><option value="Security">Segurança</option><option value="Weather">Clima</option><option value="Health">Saúde</option><option value="Local News">Notícias locais</option><option value="Other">Outro</option></select>
+<select name="main_category" required=""><option data-i18n="form_category_empty" value="">Selecione uma</option><option value="Crypto">Cripto</option><option value="Sports">Esportes</option><option value="Politics">Política</option><option value="Economy">Economia</option><option value="Entertainment">Entretenimento</option><option value="Culture">Cultura</option><option value="Security">Segurança</option><option value="Weather">Clima</option><option value="Health">Saúde</option><option value="Local News">Notícias locais</option><option value="Other">Outro</option></select>
 </div>
 <div class="c-field"><label data-i18n="form_expertise">O que você conhece melhor? *</label><textarea data-i18n-placeholder="form_expertise_ph" name="expertise" placeholder="Exemplo: política do Equador, LigaPro, BTC, Bad Bunny, F1, eleições no México" required=""></textarea></div>
 <div class="c-field"><label data-i18n="form_sources">Quais fontes você acompanha? *</label><textarea data-i18n-placeholder="form_sources_ph" name="sources" placeholder="Sites de notícias, provedores de dados, ligas, exchanges, contas oficiais, canais de Telegram" required=""></textarea></div>
-<div class="c-field"><label data-i18n="form_distribution">Canal de distribuição, opcional</label><input data-i18n-placeholder="form_distribution_ph" name="distribution" placeholder="X, Telegram, TikTok, newsletter, WhatsApp, comunidade" type="text"/></div>
+<div class="c-field"><label data-i18n="form_twitter">Twitter/X handle *</label><input data-i18n-placeholder="form_twitter_ph" name="twitter_handle" placeholder="@username" required="" type="text"/></div>
+<div class="c-field"><label data-i18n="form_telegram">Telegram handle</label><input data-i18n-placeholder="form_telegram_ph" name="telegram_handle" placeholder="@username" type="text"/></div>
 <div class="c-field"><label data-i18n="form_why">Por que você seria um bom criador de mercados? *</label><textarea data-i18n-placeholder="form_why_ph" name="why" placeholder="Conte sua vantagem em poucas linhas." required=""></textarea></div>
 <button class="c-submit" data-i18n="form_submit" type="submit">Enviar aplicação</button>
 <p class="c-form-note" data-i18n="form_note">Aplicar não tem custo. Criadores aprovados ficam sujeitos às regras do programa.</p>
@@ -2093,7 +2094,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "form_category_empty": "Select one",
             "form_expertise": "What do you know best? *",
             "form_sources": "What sources do you follow? *",
-            "form_distribution": "Distribution channel, optional",
+            "form_twitter": "Twitter/X handle *",
+            "form_telegram": "Telegram handle",
             "form_why": "Why would you be a good Market Creator? *",
             "form_submit": "Submit Application",
             "form_note": "No cost to apply. Approved creators are subject to program rules.",
@@ -2225,7 +2227,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "form_category_empty": "Seleccioná una",
             "form_expertise": "¿Qué conocés mejor? *",
             "form_sources": "¿Qué fuentes seguís? *",
-            "form_distribution": "Canal de distribución, opcional",
+            "form_twitter": "Twitter/X handle *",
+            "form_telegram": "Telegram handle",
             "form_why": "¿Por qué serías buen creador de mercados? *",
             "form_submit": "Enviar aplicación",
             "form_note": "Aplicar no tiene costo. Los creadores aprobados están sujetos a reglas del programa.",
@@ -2249,7 +2252,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "nav_partners": "Parceiros",
             "form_expertise_ph": "Ejemplo: política de Ecuador, LigaPro, BTC, Bad Bunny, F1, elecciones de México",
             "form_sources_ph": "Medios, proveedores de datos, ligas, exchanges, cuentas oficiales, canales de Telegram",
-            "form_distribution_ph": "X, Telegram, TikTok, newsletter, WhatsApp, comunidad",
+            "form_twitter_ph": "@username",
+            "form_telegram_ph": "@username",
             "form_why_ph": "Contanos tu ventaja en pocas líneas.",
             "ticker": [
                   "Preguntas claras",
@@ -2370,7 +2374,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "form_category_empty": "Selecione uma",
             "form_expertise": "O que você conhece melhor? *",
             "form_sources": "Quais fontes você acompanha? *",
-            "form_distribution": "Canal de distribuição, opcional",
+            "form_twitter": "Twitter/X handle *",
+            "form_telegram": "Telegram handle",
             "form_why": "Por que você seria um bom criador de mercados? *",
             "form_submit": "Enviar aplicação",
             "form_note": "Aplicar não tem custo. Criadores aprovados ficam sujeitos às regras do programa.",
@@ -2394,7 +2399,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "nav_partners": "Parceiros",
             "form_expertise_ph": "Exemplo: política do Equador, LigaPro, BTC, Bad Bunny, F1, eleições no México",
             "form_sources_ph": "Sites de notícias, provedores de dados, ligas, exchanges, contas oficiais, canais de Telegram",
-            "form_distribution_ph": "X, Telegram, TikTok, newsletter, WhatsApp, comunidade",
+            "form_twitter_ph": "@username",
+            "form_telegram_ph": "@username",
             "form_why_ph": "Conte sua vantagem em poucas linhas.",
             "ticker": [
                   "Perguntas claras",
